@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	rev               3000
+//	LOOP1             3002
+//	DONE1             3006
+//	LOOP2             3008
+//	DONE2             3012
+//	FILE              3013
+
