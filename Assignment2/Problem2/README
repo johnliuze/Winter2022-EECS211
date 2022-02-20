@@ -1,0 +1,57 @@
+Assignment2 Problem1 John Liu
+-----------------------------------------------------------------------------------
+
+Run the following command in terminal at the very beginning
+    (Assuming the lc3as is already installed in the same folder):
+        $ gcc lc3.c -o A2P2
+        $ ./lc3as 2-2-trapvec.asm
+        $ ./lc3as 2-2-trap.asm
+        $ ./lc3as 2-2-process1.asm
+        $ ./lc3as 2-2-process2.asm
+        $ ./lc3as 2-2-process3.asm
+        $ ./lc3as 2-2-process4.asm
+        $ ./lc3as 2-2-process5.asm
+        $ ./lc3as 2-2.asm
+
+Run the VM program:
+    $ ./A2P2
+
+File Explanation:
+    C File:
+        lc3.c : C file of Virtual Machine
+    ASM File:
+        2-2-trapvec.asm : Assembly file aims to fill the trap vectors
+        2-2-trap.asm : Assembly file aims to fullfill the trap service routines
+        2-2-process1.asm : Assembly file aims to fill the scheduler process 1
+        2-2-process2.asm : Assembly file aims to fill the scheduler process 2
+        2-2-process3.asm : Assembly file aims to fill the scheduler process 3
+        2-2-process4.asm : Assembly file aims to fill the scheduler process 4
+        2-2-process5.asm : Assembly file aims to fill the scheduler process 5
+        2-2.asm : Assembly file of the main function
+    TXT File:
+        memory_dump_p2_1.txt : Text file of memory/register dump at the OS begin (before running)
+                               Status for all processes are 0, MR_SM = 0, MR_MPU = 0
+        memory_dump_p2_2.txt : Text file of memory/register dump at the OS begin (after assigning processes ready to run)
+                               Status for all processes are 1, MR_SM = 0, MR_MPU = 1
+        memory_dump_p2_3.txt : Text file of memory/register dump right after the TRAP_HALT from the main function
+                               MR_SM changes from 0 to 1, MR_MPU changes from 1 to 0
+        memory_dump_p2_4.txt : Text file of memory/register dump before the process 1 starts
+                               MR_MPU changes from 0 to 2, status for process 1 changes from 1 to 2, MR_SM remains 1 because of MR_MPU
+        memory_dump_p2_5.txt : Text file of memory/register dump right after process 1 finished
+                               MR_MPU changes back to 0, status for process 1 changes from 2 to 0, R1 changes from 0 to 1, MR_SM and status for process 1 will not be modified in process 1 because of MR_MPU
+        memory_dump_p2_6.txt : Text file of memory/register dump before the process 2 starts
+                               MR_MPU changes from 0 to 3, status for process 2 changes from 1 to 2, MR_SM remains 1 because of MR_MPU
+        memory_dump_p2_7.txt : Text file of memory/register dump right after process 2 finished
+                               MR_MPU changes back to 0, status for process 2 changes from 2 to 0, R1 changes from 1 to 2, MR_SM and status for process 2 will not be modified in process 2 because of MR_MPU
+        memory_dump_p2_8.txt : Text file of memory/register dump before the process 3 starts
+                               MR_MPU changes from 0 to 4, status for process 3 changes from 1 to 2, MR_SM remains 1 because of MR_MPU
+        memory_dump_p2_9.txt : Text file of memory/register dump right after process 3 finished
+                               MR_MPU changes back to 0, status for process 3 changes from 2 to 0, R1 changes from 2 to 3, MR_SM and status for process 3 will not be modified in process 3 because of MR_MPU
+        memory_dump_p2_10.txt : Text file of memory/register dump before the process 4 starts
+                               MR_MPU changes from 0 to 5, status for process 4 changes from 1 to 2, MR_SM remains 1 because of MR_MPU
+        memory_dump_p2_11.txt : Text file of memory/register dump right after process 4 finished
+                               MR_MPU changes back to 0, status for process 4 changes from 2 to 0, R1 changes from 3 to 4, MR_SM and status for process 4 will not be modified in process 4 because of MR_MPU
+        memory_dump_p2_12.txt : Text file of memory/register dump before the process 5 starts
+                               MR_MPU changes from 0 to 6, status for process 5 changes from 1 to 2, MR_SM remains 1 because of MR_MPU
+        memory_dump_p2_13.txt : Text file of memory/register dump right after process 5 finished
+                               MR_MPU changes back to 0, status for process 5 changes from 2 to 0, R1 changes from 4 to 5, MR_SM and status for process 5 will not be modified in process 5 because of MR_MPU
