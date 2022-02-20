@@ -32,14 +32,13 @@ File Explanation:
         memory_dump_p2_1.txt : Text file of memory/register dump at the OS begin (before assign processes ready to run)
         memory_dump_p2_2.txt : Text file of memory/register dump right after the TRAP_HALT from the main function (MR_SM changes from 0 to 1)
         memory_dump_p2_3.txt : Text file of memory/register dump before the process 1 starts (MR_SM change from 1 to 0) 
-        memory_dump_p2_4.txt : Text file of memory/register dump in the process 1 (MR_SM stays 0, status of process 1 changes from 2 to 1)
-        memory_dump_p2_5.txt : Text file of memory/register dump before the process 1 starts (MR_SM change from 1 to 0) 
-        memory_dump_p2_6.txt : Text file of memory/register dump in the process 1 (MR_SM stays 0, status of process 1 changes from 2 to 1)
-        memory_dump_p2_7.txt : Text file of memory/register dump before the process 1 starts (MR_SM change from 1 to 0) 
-        memory_dump_p2_8.txt : Text file of memory/register dump in the process 1 (MR_SM stays 0, status of process 1 changes from 2 to 1)
+        memory_dump_p2_4.txt : Text file of memory/register dump in the process 1 (MR_SM remains 0, status of process 1 changes from 2 to 1)
+        memory_dump_p2_5.txt : Text file of memory/register dump right after the TRAP_HALT from the process 1 (MR_SM changes from 0 to 1)
+        memory_dump_p2_6.txt : Text file of memory/register dump before the process 1 starts (MR_SM change from 1 to 0) 
+        memory_dump_p2_7.txt : Text file of memory/register dump in the process 1 (MR_SM remains 0, status of process 1 changes from 2 to 1)
+        memory_dump_p2_8.txt : Text file of memory/register dump right after the TRAP_HALT from the process 1 (MR_SM changes from 0 to 1)
         memory_dump_p2_9.txt : Text file of memory/register dump before the process 1 starts (MR_SM change from 1 to 0) 
-        memory_dump_p2_10.txt : Text file of memory/register dump in the process 1 (MR_SM stays 0, status of process 1 changes from 2 to 1)
+        memory_dump_p2_10.txt : Text file of memory/register dump in the process 1 (MR_SM remains 0, status of process 1 changes from 2 to 1)
 
 PLEASE NOTE:
-    Since the status of process was modified in the process, the scheduler I designed will stuck in the process 1. So that 3, 5, 7, and 9 text files are the same, and 4, 6, 8, 10 text files will be the same.
-    
+    Since the status of process was modified in the process, the scheduler I designed will stuck in the process 1. So that text file 2, 5, 8 are the same; 3, 6, 9 are the same and 4, 7, 10 are the same.
