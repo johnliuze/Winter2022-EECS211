@@ -1,8 +1,0 @@
-// Symbol table
-// Scope level 0:
-//	Symbol Name       Page Address
-//	----------------  ------------
-//	VALUE5            8004
-//	MR_SM             8005
-//	STATUS_PROCESS5   8006
-
